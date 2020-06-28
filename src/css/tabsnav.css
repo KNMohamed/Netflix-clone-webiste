@@ -1,0 +1,25 @@
+ul.react-tabs__tab-list {
+  padding: 0; margin: 0;
+  list-style-type: none;
+}
+
+/* Tab Nav #1 */
+.tab-icon-door {
+  width: 2.8125rem;
+  height: 2.8125rem; 
+  fill: var(--main-grey);
+}
+
+/* Tab Nav #2 */
+.tab-icon-devices {
+  width: 9.687rem;
+  height: 9.687rem;
+  fill: var(--main-grey);
+}
+
+/* Tab Nav #2 */
+.tab-icon-price-tag {
+  width: 4.375rem;
+  height: 4.375rem;
+  fill: var(--main-grey);
+}
