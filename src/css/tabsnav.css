@@ -1,5 +1,5 @@
-ul.react-tabs__tab-list {
-  padding: 0; margin: 0;
+ul.tab-nav-container {
+  padding: 0;
   list-style-type: none;
 }
 
@@ -22,4 +22,43 @@ ul.react-tabs__tab-list {
   width: 4.375rem;
   height: 4.375rem;
   fill: var(--main-grey);
+}
+
+/* Tabs */
+.tabs {
+  padding-top: 1rem;
+}
+
+.tab-nav-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+  color: var(--main-grey);
+  margin: 0 12%;
+}
+/* Tabs Nav Hover Effect */
+ul li:not(.active):hover{
+  color: #fff;
+  cursor: pointer;
+}
+
+ul li:hover svg path{
+  fill: #fff;
+}
+
+/* The Active Tab */
+.active {
+  border-bottom: 4px solid var(--main-red);
+}
+
+li.active{
+  color: #fff;
+  cursor: default;
+}
+
+li.active svg path {
+  fill: #fff;
 }
