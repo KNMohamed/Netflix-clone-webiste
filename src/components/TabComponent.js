@@ -3,7 +3,10 @@ import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 import TabDoor from './tabs_nav/TabDoor';
 import TabPrice from './tabs_nav/TabPrice';
 import TabDevices from './tabs_nav/TabDevices';
-import '../css/tabsnav.css'
+import '../css/tabsnav.css';
+import TabContentOne from './TabContentOne';
+import TabContentTwo from './TabContentTwo';
+import TabContentThree from './TabContentThree';
 
 export default class TabComponent extends Component {
   state = {
@@ -34,6 +37,16 @@ export default class TabComponent extends Component {
               </p>
             </Tab>
           </TabList>
+          {/* Tabs Content */}
+          <TabPanel>
+            <TabContentOne/>
+          </TabPanel>
+          <TabPanel>
+            <TabContentTwo/>
+          </TabPanel>
+          <TabPanel>
+            <TabContentThree/>
+          </TabPanel>
         </Tabs>
       </div>
     )
