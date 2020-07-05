@@ -20,21 +20,26 @@ export default class TabComponent extends Component {
           <TabList className="tab-nav-container">
             <Tab className={`${this.state.tabIndex === 0 ? 'active' : ''}`}>
               <TabDoor/>
-              <p>
+              <p className="lgScreen">
                 <strong>No commitments.<br/> Cancel online at anytime.</strong>
               </p>
+              <br/>
+              <span className="mdScreen" style={{marginTop: "0.4rem"}}>Cancel</span>
             </Tab>
             <Tab className={`${this.state.tabIndex === 1 ? 'active' : ''}`}>
               <TabDevices/>
-              <p style={{marginTop: '-5.3125rem'}}>
+              <p className="lgScreen" style={{marginTop: '-5.3125rem'}}>
                 <strong>Watch anywhere.</strong>
               </p>
+              <span className="mdScreen" style={{marginTop: '-5.3125rem'}}>Devices</span>
             </Tab>
             <Tab className={`${this.state.tabIndex === 2 ? 'active' : ''}`}>
               <TabPrice/>
-              <p>
+              <p className="lgScreen">
                 <strong>Pick your price.</strong>
               </p>
+              <br/>
+              <span className="mdScreen">Price</span>
             </Tab>
           </TabList>
           {/* Tabs Content */}

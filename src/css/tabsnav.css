@@ -10,6 +10,23 @@ ul.tab-nav-container {
   fill: var(--main-grey);
 }
 
+/* Media tab nav #1 */
+@media( max-width: 900px) {
+  .tab-icon-door {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .tab-icon-devices {
+    width: 8rem !important;
+    height: 8rem !important;
+  }
+  .tab-icon-price-tag {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+
 /* Tab Nav #2 */
 .tab-icon-devices {
   width: 9.687rem;
@@ -19,8 +36,8 @@ ul.tab-nav-container {
 
 /* Tab Nav #2 */
 .tab-icon-price-tag {
-  width: 4.375rem;
-  height: 4.375rem;
+  width: 2.4rem;
+  height: 2.4rem;
   fill: var(--main-grey);
 }
 
@@ -61,4 +78,22 @@ li.active{
 
 li.active svg path {
   fill: #fff;
+}
+
+/* Media for tabs nav */
+@media(min-width: 900px) {
+  .mdScreen {
+    display: none;
+  }
+}
+
+@media(max-width: 900px) {
+  .lgScreen {
+    display: none;
+  }
+
+  .mdScreen {
+    display: block;
+    margin-bottom: 0.4rem;
+  }
 }

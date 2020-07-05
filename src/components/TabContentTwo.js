@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import imgTv from '../assets/images/tab-tv.png';
 import imgTab from '../assets/images/tab-tablet.png';
 import imgMac from '../assets/images/tab-macbook.png';
+import { generateMedia } from 'styled-media-query';
 
 export default function TabContentTwo() {
   return (
@@ -36,6 +37,11 @@ export default function TabContentTwo() {
   )
 }
 
+/* Media Query*/
+const customMedia = generateMedia({
+  smDesktop: '1440px',
+  tablet: '960px'
+});
 
 const TabContainer = styled.div`
   background: var(--main-deep-dark);
@@ -60,6 +66,30 @@ const TabContainer = styled.div`
       margin: 0 1.25rem 0 1.25rem;
       grid-column: 10/12;
     }
+    ${customMedia.lessThan('smDesktop')`
+      grid-template-columns: repeat(2,1fr);
+    `}
+
+
+    ${customMedia.lessThan('tablet')`
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 1.5rem;
+      span {
+        grid-column: 1 / -1;
+        font-size: 1.5rem;
+      }
+
+      .btn {
+        grid-column: 1/-1;
+        margin-left: 30%;
+        margin-right: 30%;
+      }
+    `}
+  }
+
+  img {
+    width: 100%;
   }
 
   .tab-bottom-content {
@@ -68,6 +98,10 @@ const TabContainer = styled.div`
     gap: 2rem;
     text-align: center;
     margin-top: 2rem;
+    ${customMedia.lessThan('tablet')`
+      grid-template-columns: 1fr;
+    `}
+
   }
 
   h3 {
